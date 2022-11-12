@@ -5,7 +5,7 @@ const C = console;
 const WIN_MESSAGE = 'Wow! You guessed right! 🤯, You are a lucky person!';
 const LOW_MESSAGE = 'Your guess is too low! 📉 ';
 const HIGH_MESSAGE = 'Your guess is too high! 📈';
-const OUT_OF_GUESSES_MESSAGE = 'You have run out of guesses! 😭';
+const OUT_OF_GUESSES_MESSAGE = 'You have run out of guesses! 😭, try again!';
 const OUT_OF_RANGE = 'Please enter a number between 0 and 20';
 
 let luckyNumber = Math.floor(Math.random() * 20);
@@ -33,6 +33,9 @@ const scoreProcess = (message) => {
   if (message === WIN_MESSAGE) {
     leftSection.style.visibility = 'hidden';
     mainSection.style.backgroundColor = '#367E18';
+    againButton.style.backgroundColor = '#367E18'
+    againButton.textContent = 'Play Again!';
+    againButton.style.color = '#ccc';
     return;
   }
 
@@ -46,6 +49,9 @@ const scoreProcess = (message) => {
     leftSection.style.visibility = 'hidden';
     messageBox.textContent = OUT_OF_GUESSES_MESSAGE;
     mainSection.style.backgroundColor = '#333';
+    againButton.style.backgroundColor = '#AE0900';
+    againButton.textContent = 'Try Again!';
+    againButton.style.color = '#ccc';
   }
 };
 
