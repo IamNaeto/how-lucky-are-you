@@ -15,10 +15,9 @@ body {
   font-family: 'Rubik', sans-serif;
   color: #eee;
   background-color: #222;
-  background-image: url(img/lucky.jpg);
+  background-image: url(img/hand-dice.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  backdrop-filter: blur(8px);
 }
 
 /* LAYOUT */
